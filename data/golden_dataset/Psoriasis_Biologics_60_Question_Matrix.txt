@@ -1,0 +1,249 @@
+================================================================================
+PSORIASIS BIOLOGICS: 60-QUESTION TESTING MATRIX
+================================================================================
+
+--- SKYRIZI (RISANKIZUMAB) ---
+
+[Scenario 1: Initial Approval - BSA Cutoff]
+Question: A provider submits a prior authorization request for Skyrizi for an adult patient diagnosed with plaque psoriasis. The clinical documentation indicates that the disease is localized, affecting exactly 1.5% of the patient's total body surface area (BSA), with mild plaques on the elbows. Will this meet the clinical severity criteria for initial authorization?
+Ground_Truth: No. UnitedHealthcare commercial criteria require the patient to have moderate-to-severe plaque psoriasis, which explicitly dictates a minimum body surface area (BSA) involvement of >= 3%, unless a critical area exemption applies.
+
+[Scenario 2: Initial Approval - Critical Area Exemption]
+Question: An adult patient diagnosed with plaque psoriasis presents with severe, painful scaling restricted exclusively to the palms of both hands and the soles of both feet (palmoplantar psoriasis). The total measured body surface area (BSA) is only 1%. The provider submits a prior authorization for Skyrizi. Will this be approved despite falling below the 3% BSA threshold?
+Ground_Truth: Yes. The policy allows an exemption to the standard >= 3% BSA requirement if the plaque psoriasis demonstrates significant functional impairment due to involvement of critical areas, which explicitly includes palmoplantar, facial, genital, or severe scalp involvement.
+
+[Scenario 3: Initial Approval - Lack of First-Line Step Therapy]
+Question: A 32-year-old patient is newly diagnosed with severe plaque psoriasis covering 12% of their BSA. The dermatologist wants to start the patient immediately on Skyrizi as their very first medication. The clinical record notes that the patient has never tried any topical therapies, phototherapy, or oral systemic medications. Will UnitedHealthcare approve this request?
+Ground_Truth: No. The policy mandates strict step therapy. Initial authorization requires a documented history of failure, intolerance, or contraindication to first-line therapies, which include topical corticosteroids, vitamin D analogs, phototherapy, or traditional systemics (like Methotrexate).
+
+[Scenario 4: Initial Approval - Duration of Prior Topical Trial]
+Question: A patient with moderate plaque psoriasis has been using a high-potency topical corticosteroid prescribed by their primary care provider. After exactly 5 days of application, the patient stopped using it because they saw no visible improvement. The dermatologist now submits a prior authorization for Skyrizi, citing failure of topical therapy. Does this satisfy the step therapy requirement?
+Ground_Truth: No. The policy requires a legitimate, clinically meaningful trial of topical therapy (typically a minimum of 2 to 4 weeks depending on the specific agent) unless contraindicated. A 5-day trial is insufficient to document a true clinical "failure" of first-line agents.
+
+[Scenario 5: Initial Approval - The Sample Loophole]
+Question: A patient with severe plaque psoriasis has been stable and clear for the last 3 months using free starter samples provided directly by the AbbVie-sponsored 'Skyrizi Complete' program in the prescriber's office. The provider submits an initial prior authorization for commercial coverage, stating the patient is a current user and stable on therapy. Will UHC automatically grant initial approval based on this established stability?
+Ground_Truth: No. The policy explicitly states that patients requesting initial authorization who were established on therapy via free manufacturer samples or assistance from the AbbVie Skyrizi Complete program are strictly required to meet all initial authorization criteria (including step therapy and BSA thresholds) as if they were a brand-new patient.
+
+[Scenario 6: Initial Approval - Contraindication to Oral Systemics]
+Question: A patient has severe plaque psoriasis (8% BSA). The provider wants to initiate Skyrizi. The insurance company's guidelines ask if the patient has tried traditional oral systemics like Methotrexate. The patient has a documented history of severe liver cirrhosis, making oral Methotrexate medically dangerous. No topical therapies have been tried. Can Skyrizi be approved?
+Ground_Truth: Yes. The policy allows patients to bypass specific oral systemic step-therapy requirements if there is a documented medical contraindication or clinically significant adverse effect associated with those traditional first-line drugs.
+
+[Scenario 7: Initial Approval - Concurrent Biologic Therapy]
+Question: A patient with moderate-to-severe plaque psoriasis is currently taking Humira (adalimumab) for rheumatoid arthritis. The patient's skin plaques are flaring up terribly, so the dermatologist wants to add Skyrizi to their regimen while keeping them on Humira for their joints. Will UnitedHealthcare approve the initial authorization for Skyrizi?
+Ground_Truth: No. The policy explicitly states that Skyrizi will not be approved if it is administered in combination with another targeted immunomodulator or biologic DMARD (such as Humira, Enbrel, or Cosentyx).
+
+[Scenario 8: Initial Approval - Diagnosis Verification via Code]
+Question: A prior authorization request is submitted for Skyrizi. The clinical documentation lists the primary diagnosis as 'Pityriasis Rubra Pilaris' (ICD-10 code L44.0), a rare skin disorder that resembles psoriasis, but notes that the patient's plaques are severe and cover 15% of the body. Will this satisfy the diagnostic criteria for Skyrizi approval?
+Ground_Truth: No. Skyrizi is heavily restricted based on FDA-approved indications. The policy strictly requires a confirmed diagnosis of moderate-to-severe plaque psoriasis (ICD-10 L40.0), active psoriatic arthritis, Crohn's disease, or ulcerative colitis. It will not be authorized for unapproved skin conditions.
+
+[Scenario 9: Initial Approval - Tuberculosis Screening Requirement]
+Question: A provider submits a complete clinical packet for a new Skyrizi request, documenting 10% BSA, failure of Methotrexate, and zero concurrent biologics. However, the patient's file contains no record of a latent Tuberculosis (TB) screening or IGRA blood test within the past 12 months. Will this request be approved?
+Ground_Truth: No. Biologics that suppress the immune system carry warnings regarding infection risks. Payer policies require documented evidence of a negative Tuberculosis (TB) screening test (or completion of treatment for latent TB) prior to initiating therapy with an IL-23 inhibitor like Skyrizi.
+
+[Scenario 10: Initial Approval - Age Restrictions]
+Question: A pediatric dermatologist submits a prior authorization for Skyrizi for a 10-year-old child who has severe, widespread plaque psoriasis that has failed to respond to all standard topical regimens. Will UnitedHealthcare grant commercial coverage for this request?
+Ground_Truth: No. While some biologics are approved for pediatric use, Skyrizi's FDA indication and UHC policy clinical criteria for moderate-to-severe plaque psoriasis are restricted strictly to adults (>= 18 years of age).
+
+[Scenario 11: Reauthorization - Missing Clinical Documentation]
+Question: A patient has been on approved Skyrizi commercial therapy for 12 months. The doctor submits a reauthorization request but does not provide any updated clinical notes or scores, just a note saying 'renew prescription.' Does this qualify for reauthorization?
+Ground_Truth: No. Reauthorization requires documented evidence of positive clinical response (such as a significant reduction in BSA or a PASI score improvement) compared to the baseline before the medication was started.
+
+[Scenario 12: Reauthorization - Lack of Response at 16 Weeks]
+Question: A patient completed the initial Skyrizi loading doses and reached week 16. The provider submits an early continuation request, but clinical notes show the patient's psoriasis has not improved at all (0% reduction in BSA). Will the continuation be approved?
+Ground_Truth: No. Payer policies require documented clinical improvement or achievement of clear/almost clear skin status to justify continuation beyond the initial authorization period.
+
+[Scenario 13: Reauthorization - Development of Active Infection]
+Question: During a reauthorization review for Skyrizi, the clinical notes indicate the patient has developed a severe, active systemic fungal infection requiring hospitalization. Will the reauthorization be approved immediately?
+Ground_Truth: No. The policy dictates that therapy should be paused or denied if a patient develops a serious active infection, until the infection is completely resolved.
+
+[Scenario 14: Reauthorization - Interrupted Therapy Gap]
+Question: A patient was approved for Skyrizi but stopped taking it for 9 months due to personal reasons. The doctor now files a reauthorization. Can this be evaluated under standard reauthorization rules?
+Ground_Truth: No. Large gaps in therapy typically require the request to be re-evaluated under initial authorization criteria, as baseline parameters must be re-established.
+
+[Scenario 15: Reauthorization - Combination Therapy Violation]
+Question: A patient on stable Skyrizi maintenance dose for plaque psoriasis is experiencing a brief flare-up. The provider adds an oral Janus kinase (JAK) inhibitor to the regimen and submits a reauthorization for the Skyrizi. How should the system flag this?
+Ground_Truth: Denial. The reauthorization criteria explicitly state the patient must not receive Skyrizi in combination with another targeted immunomodulator.
+
+[Scenario 16: Reauthorization - Change to Unapproved Indication]
+Question: A patient originally approved for Skyrizi for plaque psoriasis shows skin clearing, but is now diagnosed with an unrelated condition, Vitiligo. The doctor requests a renewal citing 'maintenance of skin clearance and Vitiligo control.' Will this pass?
+Ground_Truth: No. Reauthorization requires tracking the primary approved indication (Plaque Psoriasis). Skyrizi is not authorized or approved for Vitiligo maintenance.
+
+[Scenario 17: Reauthorization - Dose Escalation Request]
+Question: A provider files a reauthorization for Skyrizi but requests a double dose (150 mg every 4 weeks instead of every 12 weeks) because the patient is having a mild flare. Will standard reauthorization cover this?
+Ground_Truth: No. The request will be denied or flagged for medical director review because it exceeds the FDA-approved and policy-mandated maintenance dosage guidelines.
+
+[Scenario 18: Reauthorization - Sustained Remission Evaluation]
+Question: A reauthorization request shows the patient has achieved 100% skin clearance (PASI 100) and zero symptoms. Does this warrant a denial due to the disease being resolved?
+Ground_Truth: No. Maintaining a clear skin score (PASI 100) is the ultimate goal of biologic therapy, satisfying the clinical benefit requirement for reauthorization.
+
+[Scenario 19: Reauthorization - Pregnancy Status Check]
+Question: A female patient on Skyrizi applies for reauthorization. The clinical notes mention she is now pregnant. Does the UHC policy explicitly state pregnancy is an absolute contraindication requiring immediate denial?
+Ground_Truth: No. The policy does not mandate an automatic denial; it leaves clinical registry tracking and risk-benefit choices to the prescriber, meaning the bot should approve if response metrics match.
+
+[Scenario 20: Reauthorization - Switch from Commercial to Medicare Advantage]
+Question: A patient on Skyrizi switches from UHC Commercial to a UHC Medicare Advantage plan. Will their commercial reauthorization automatically transfer without a new clinical review?
+Ground_Truth: No. Medicare Advantage plans follow distinct CMS or local policy criteria, meaning a fresh prior authorization evaluation is triggered.
+
+--- BIMZELX (BIMEKIZUMAB) ---
+
+[Scenario 21: Initial Approval - Preferred Adalimumab Step]
+Question: A dermatologist prescribes Bimzelx for an adult with severe plaque psoriasis (15% BSA). The patient has failed topicals but has never tried an adalimumab product. Will this request be approved?
+Ground_Truth: No. The UHC Bimzelx policy features a step-therapy requirement demanding historical trial and failure of a preferred adalimumab product (or other specified preferred immunomodulators) before Bimzelx is unlocked.
+
+[Scenario 22: Initial Approval - Exception to Preferred Step]
+Question: A patient requires Bimzelx, but their chart notes a severe, documented allergic reaction to adalimumab in the past. Will the step-therapy hurdle for the preferred product be bypassed?
+Ground_Truth: Yes. Documented contraindications or severe adverse events to preferred agents allow the patient to satisfy or bypass the step-therapy requirement.
+
+[Scenario 23: Initial Approval - Dual IL-17 Mechanism Validation]
+Question: A prior authorization for Bimzelx is submitted. Does the policy permit approval if the patient has a primary diagnosis of mild plaque psoriasis affecting less than 1% BSA without critical area involvement?
+Ground_Truth: No. Just like other advanced biologics, Bimzelx requires a documented severity profile of moderate-to-severe plaque psoriasis (BSA >= 3%).
+
+[Scenario 24: Initial Approval - Baseline Lab Monitoring]
+Question: A provider requests Bimzelx but has not conducted a baseline liver function test (LFT) or hepatitis panel. Does the policy require documentation of these specific labs prior to the very first dose?
+Ground_Truth: Yes. Advanced biologics like Bimzelx require screening for baseline liver health and infectious diseases (like TB) before approval is authorized.
+
+[Scenario 25: Initial Approval - Crucial Area Exclusion Check]
+Question: A patient has 2% BSA plaque psoriasis localized exclusively to the face and neck, making it impossible to work due to social anxiety. Will this qualify under Bimzelx criteria?
+Ground_Truth: Yes. Facial involvement satisfies the critical area exemption, allowing approval despite the total BSA being under 3%.
+
+[Scenario 26: Initial Approval - Inflammatory Bowel Disease Warning]
+Question: A patient with severe plaque psoriasis also has active, severe Crohn's Disease. The provider requests Bimzelx. How does the policy view Bimzelx use in patients with active inflammatory bowel disease (IBD)?
+Ground_Truth: The policy notes a precaution/warning; IL-17 inhibitors can exacerbate IBD, requiring careful clinical validation, but it is not a hard block if the provider asserts a risk-benefit necessity.
+
+[Scenario 27: Initial Approval - Weight-Based Dosing Check]
+Question: A provider prescribes Bimzelx for an adult weighing 140 kg, requesting a triple dose because of the patient's size. Will this be approved under standard criteria?
+Ground_Truth: No. The policy specifies standard fixed dosing guidelines for adults; modifications outside FDA labels are flagged for denial or peer-to-peer review.
+
+[Scenario 28: Initial Approval - Active Tuberculosis Exception]
+Question: A patient has severe plaque psoriasis and a confirmed, untreated active Tuberculosis infection. Will Bimzelx be approved for immediate initial use?
+Ground_Truth: No. Active TB is a absolute contraindication for starting biological therapies due to the severe risk of immunosuppressive complications.
+
+[Scenario 29: Initial Approval - Concomitant Methotrexate Allowed?]
+Question: A provider requests Bimzelx and notes the patient will continue taking oral Methotrexate alongside it. Does the policy prohibit using Bimzelx in combination with traditional oral non-biologic systemics?
+Ground_Truth: No. The policy prohibits combination with other *biologics* or *targeted immunomodulators*, but allows concomitant use of traditional non-biologic systemics like Methotrexate.
+
+[Scenario 30: Initial Approval - Live Vaccine Administration]
+Question: A patient received a live virus vaccine (e.g., MMR) yesterday and wants to start Bimzelx tomorrow. How does the policy address the timing of live vaccines?
+Ground_Truth: The policy states that live vaccines should not be given concurrently with Bimzelx; a minimum waiting period (typically 2-4 weeks) is required before initiating the biologic.
+
+[Scenario 31: Reauthorization - Positive Clinical Response Window]
+Question: A patient has been on approved Bimzelx therapy for 12 months. The provider submits a reauthorization request noting that the patient has shown a 'positive clinical response.' Is this phrase alone sufficient for approval?
+Ground_Truth: Yes. The policy states that reauthorization will be approved based on documentation of a positive clinical response to Bimzelx therapy.
+
+[Scenario 32: Reauthorization - Worsening Symptoms Assessment]
+Question: A reauthorization request for Bimzelx contains clinical notes indicating that the patient's skin has deteriorated significantly, with BSA increasing from a baseline of 5% to 15%. Will this be approved?
+Ground_Truth: No. A documented lack of efficacy or clear clinical worsening fails to meet the requirement for demonstrating continued therapeutic benefit.
+
+[Scenario 33: Reauthorization - Malignancy Development]
+Question: A patient on Bimzelx is diagnosed with active, metastatic melanoma during their maintenance period. Does the policy mandate automatic chatbot approval for continuation?
+Ground_Truth: No. The development of a new malignancy requires a pause or denial for a comprehensive medical director review due to systemic immunosuppression risks.
+
+[Scenario 34: Reauthorization - Neutropenia Flag]
+Question: Routine lab work submitted with a Bimzelx reauthorization indicates severe, absolute neutropenia. Will the system auto-approve the renewal?
+Ground_Truth: No. Severe hematological abnormalities like neutropenia require clinical intervention and a hold on biological therapies according to safety monitoring criteria.
+
+[Scenario 35: Reauthorization - Incomplete Initial Loading Dose]
+Question: A patient was approved for Bimzelx but missed all maintenance doses after the initial loading cycle. The renewal request is filed at month 12. Will this be processed as a standard reauthorization?
+Ground_Truth: No. Non-compliance resulting in a complete failure to execute the maintenance phase requires the request to be handled as a new initial application.
+
+[Scenario 36: Reauthorization - Candida Infection Tracking]
+Question: A Bimzelx renewal notes the patient developed mild oral thrush (Candida), which was successfully treated with local antifungals, and the patient is now symptom-free. Will this cause a denial?
+Ground_Truth: No. If the fungal infection is mild, localized, and resolved, continuation of Bimzelx is permissible.
+
+[Scenario 37: Reauthorization - Shared Decision Making Docs]
+Question: A reauthorization request includes a signed statement from the patient confirming compliance and satisfaction, but lacks an assessment from the prescribing physician. Will this pass review?
+Ground_Truth: No. Reauthorization requires an objective clinical assessment from the prescribing specialist or healthcare professional to validate efficacy.
+
+[Scenario 38: Reauthorization - Dose Reduction Attempt]
+Question: A patient is doing exceptionally well on Bimzelx, so the doctor requests a renewal but extends the maintenance interval to every 16 weeks instead of 8. Will this cause an automatic policy denial?
+Ground_Truth: No. Spacing out doses (under-dosing/tapering) due to clinical success is generally permitted or accepted, unlike exceeding maximum dose thresholds.
+
+[Scenario 39: Reauthorization - Age Eligibility Transition]
+Question: A patient who turned 18 during their initial approval period applies for an adult renewal. Will the system block it because their original approval was processed under different structural parameters?
+Ground_Truth: No. The patient now matches the adult criteria age threshold, making the transition to adult reauthorization clean and valid.
+
+[Scenario 40: Reauthorization - Secondary Loss of Response]
+Question: A patient initially cleared on Bimzelx but has begun developing anti-drug antibodies, losing all clinical response by month 12. Will the reauthorization be approved?
+Ground_Truth: No. If there is a confirmed secondary loss of response with no clinical benefit, continuing the medication is not authorized.
+
+--- SOTYKTU (DEUCRAVACITINIB) ---
+
+[Scenario 41: Initial Approval - Oral TYK2 Inhibitor Novel Mechanism]
+Question: A provider submits a prior authorization for Sotyktu for an adult with moderate plaque psoriasis (5% BSA). The patient has a documented history of failure to at least one high-potency topical corticosteroid. Will this meet the initial criteria?
+Ground_Truth: Yes. For initial authorization, Sotyktu criteria require the patient to have moderate-to-severe plaque psoriasis and a documented history of failure or intolerance to at least one topical therapy.
+
+[Scenario 42: Initial Approval - Bypassing Oral Systemics]
+Question: A patient with severe plaque psoriasis has failed topical therapies. The insurer asks if they have tried oral Methotrexate before approving Sotyktu. Does the Sotyktu policy strictly require a Methotrexate failure first?
+Ground_Truth: No. Sotyktu is an oral small molecule itself; depending on the specific tier layout, many policies position it as an alternative directly after topical failure, bypassing the need to fail traditional oral systemics first.
+
+[Scenario 43: Initial Approval - Severe Renal Impairment Verification]
+Question: A provider submits a Sotyktu request for a patient with end-stage renal disease (ESRD) on dialysis. Does the policy require a specific dose adjustment or include a hard restriction for severe renal impairment?
+Ground_Truth: The policy recommends caution and monitoring, but severe renal impairment is not a hard absolute contraindication for approval, meaning the bot should authorize if clinical severity is met.
+
+[Scenario 44: Initial Approval - Pediatric Efficacy Data Check]
+Question: A prior authorization for Sotyktu is requested for a 14-year-old teenager with severe plaque psoriasis. Will this be approved under standard commercial guidelines?
+Ground_Truth: No. Sotyktu is currently indicated and authorized strictly for adults aged >= 18 years; pediatric use is not covered by the policy.
+
+[Scenario 45: Initial Approval - Prior Biologic Failure Integration]
+Question: A patient with severe plaque psoriasis previously tried and failed two advanced biologics (Skyrizi and Humira). The provider now wants to try oral Sotyktu. Does prior biologic failure disqualify them?
+Ground_Truth: No. Prior failure of advanced biological agents does not disqualify a patient; it reinforces the medical necessity for trying an alternative mechanism of action like a TYK2 inhibitor.
+
+[Scenario 46: Initial Approval - Plaque Psoriasis vs. Guttate Psoriasis]
+Question: A prior authorization request for Sotyktu lists a primary diagnosis of pure Guttate Psoriasis (ICD-10 L40.4) with zero evidence of plaque formations. Will this satisfy the diagnostic criteria?
+Ground_Truth: No. The clinical criteria and FDA indication are specific to moderate-to-severe *plaque* psoriasis. Other forms of psoriasis (guttate, erythrodermic, pustular) are excluded from standard coverage.
+
+[Scenario 47: Initial Approval - Baseline Lipid Panel Requirement]
+Question: Sotyktu can cause changes in laboratory parameters. Does the policy require a documented baseline lipid profile and triglycerides check prior to authorizing the first month?
+Ground_Truth: Yes. Monitoring guidelines embedded in the policy mandate baseline laboratory evaluations, including lipid assessments, prior to starting a TYK2 inhibitor.
+
+[Scenario 48: Initial Approval - History of Recurrent Shingles]
+Question: A clinical chart shows a patient has a history of severe, recurrent Herpes Zoster (Shingles) infections. The provider requests Sotyktu. How does the policy handle this infection risk?
+Ground_Truth: The policy flags an increased risk of herpes virus reactivation. It requires a documented clinical justification or verification that the patient has been evaluated/vaccinated before approval.
+
+[Scenario 49: Initial Approval - Concomitant Potent Immunosuppressants]
+Question: A patient is taking oral Azathioprine for an autoimmune condition. The doctor wants to add Sotyktu for plaque psoriasis. Will the system authorize this combination?
+Ground_Truth: No. Sotyktu criteria explicitly state it should not be used in combination with other potent immunosuppressants or advanced biologics.
+
+[Scenario 50: Initial Approval - Documentation of Plaque Location]
+Question: A patient has 2.5% BSA psoriasis. The plaques are located exclusively on the back and stomach. There is no involvement of the face, hands, feet, or genitals. Will this be approved?
+Ground_Truth: No. Because the BSA is under 3% and it does not affect any designated critical areas, it fails to meet the structural threshold for moderate-to-severe disease.
+
+[Scenario 51: Reauthorization - Tracking Sotyktu Efficacy at Month 6]
+Question: A patient reaches month 6 on Sotyktu. The renewal request notes a 50% reduction in skin lesions and a significant decrease in pruritus (itching). Does this satisfy the reauthorization mandate?
+Ground_Truth: Yes. Documented positive clinical response, including partial clearing or symptom reduction, satisfies the standard reauthorization requirement for continued coverage.
+
+[Scenario 52: Reauthorization - Complete Non-Response at Renewal]
+Question: A reauthorization packet for Sotyktu reveals that after 12 months of daily therapy, the patient has experienced absolutely zero change in their psoriasis plaques. Will the bot renew this?
+Ground_Truth: No. Continued coverage requires objective evidence of therapeutic benefit or clinical stabilization; absolute non-response results in a denial.
+
+[Scenario 53: Reauthorization - Elevated Triglycerides Flag]
+Question: Lab results sent with a Sotyktu renewal show a massive, dangerous spike in serum triglycerides (hypertriglyceridemia) compared to baseline. Will the system execute an automated approval?
+Ground_Truth: No. Dangerous laboratory abnormalities related to the drug's safety profile require a hold on auto-approval and a redirection to medical review.
+
+[Scenario 54: Reauthorization - Dose Doubling for Inefficacy]
+Question: A provider requests a reauthorization for Sotyktu but changes the prescription dose from 6 mg once daily to 6 mg twice daily because the patient is flaring. Will this pass standard policy limits?
+Ground_Truth: No. The policy restricts coverage strictly to the FDA-approved maintenance dose of 6 mg once daily. Higher doses are excluded from standard coverage.
+
+[Scenario 55: Reauthorization - Intermittent Compliance Issues]
+Question: The pharmacy fill history submitted with a Sotyktu reauthorization shows a Proportion of Days Covered (PDC) score of only 40%, indicating extreme patient non-compliance. Will it be renewed?
+Ground_Truth: No. Severe non-compliance without a documented clinical justification fails the continuation criteria, as regular adherence is necessary to evaluate true efficacy.
+
+[Scenario 56: Reauthorization - Resolution of All Symptoms]
+Question: A Sotyktu renewal notes that the patient's psoriasis has completely cleared (BSA 0%) and they are side-effect free. Should this request be approved?
+Ground_Truth: Yes. Achieving complete remission and maintaining it is the primary goal, justifying the renewal of maintenance therapy.
+
+[Scenario 57: Reauthorization - Transition to Psoriatic Arthritis Control]
+Question: A patient's skin is clear on Sotyktu, but they have developed new joint inflammation. The doctor files a renewal stating the drug is being maintained for 'emerging Psoriatic Arthritis.' Does the Sotyktu policy cover this indication?
+Ground_Truth: No. Sotyktu is explicitly approved and authorized for Plaque Psoriasis, not Psoriatic Arthritis. The request must be evaluated against the plaque psoriasis criteria.
+
+[Scenario 58: Reauthorization - CPK Elevation Monitoring]
+Question: A Sotyktu reauthorization contains a lab report showing asymptomatic, mild elevations in Creatine Phosphokinase (CPK). Does the policy demand immediate discontinuation for mild, asymptomatic CPK changes?
+Ground_Truth: No. Mild, asymptomatic lab fluctuations do not require a hard denial, meaning the chatbot should approve if clinical efficacy is documented.
+
+[Scenario 59: Reauthorization - Missing Baseline Comparison]
+Question: A provider fills out a renewal form but leaves the baseline data section completely blank, making it impossible to verify if the patient improved. Will the system pass this?
+Ground_Truth: No. Reauthorization logic requires a comparison against baseline status to confirm therapeutic value; missing data will trigger a request for information or a denial.
+
+[Scenario 60: Reauthorization - Concomitant Phototherapy Integration]
+Question: A patient on Sotyktu is adding narrowband UVB phototherapy twice a week to maximize clearance. The provider submits a reauthorization. Does the policy prohibit combining Sotyktu with phototherapy?
+Ground_Truth: No. Sotyktu is prohibited from being combined with *systemic biologics*, but combining it with localized or light-based phototherapy is generally acceptable under the policy guidelines.
