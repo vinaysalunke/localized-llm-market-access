@@ -1,5 +1,28 @@
 # localized-llm-market-access
 
+Markdown
+# Localized LLM Payer Coverage Navigation
+**Evaluating Localized Large Language Models and Retrieval-Augmented Generation for Payer Coverage Navigation in US Market Access**
+
+This repository contains the complete empirical framework, dataset, and evaluation scripts for the manuscript submitted to the *Journal of Managed Care & Specialty Pharmacy (JMCP)*. 
+
+## 📌 Repository Overview
+This project evaluates the operational speed and clinical accuracy of deploying localized Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) to interpret complex health insurance prior authorization (PA) policies. 
+
+By avoiding public cloud APIs (e.g., ChatGPT), this architecture complies with HIPAA and enterprise data security constraints. The study establishes scaling laws across 1.5-Billion, 7-Billion, and 14-Billion parameter models (Qwen2.5 family).
+
+## 📂 Directory Structure
+```text
+├── data/
+│   ├── golden_dataset/     # N=60 Clinical Scenario Matrix & Graded Results
+│   └── payer_policies/     # Original Commercial PA Policy PDFs
+├── scripts/
+│   ├── 01_model_1b_run.py  # Local 1.5B RAG pipeline
+│   ├── 02_model_7b_run.py  # Local 7B 4-bit Quantized RAG pipeline
+│   ├── 03_model_14b_run.py # Local 14B VRAM Hardware Stress Test
+│   └── 04_auto_grader.py   # Automated NLP String-Matching Evaluator
+├── requirements.txt        # Exact software dependencies for reproducibility
+└── README.md
 ⚙️ Hardware Requirements
 Standard Pipelines (Scripts 01 & 02): Minimum 15GB VRAM (e.g., NVIDIA T4, A10G). Tested successfully on Google Colab (Free Tier).
 
@@ -35,24 +58,6 @@ Output files will be saved in /data/golden_dataset/.
 All code and datasets are provided as open-source under the MIT License to facilitate peer review and independent replication of the findings.
 
 For peer reviewers: If you encounter environment conflicts due to CUDA driver mismatch, please ensure your PyTorch build matches the hardware accelerators available on your testing node.
-"""
-
-with open("README.md", "w") as f:
-f.write(readme_content)
-
-req_content = """torch2.1.2
-transformers4.38.1
-accelerate0.27.2
-bitsandbytes0.42.0
-langchain0.1.9
-langchain-community0.0.24
-langchain-huggingface0.0.1
-faiss-cpu1.7.4
-pandas2.2.0
-openpyxl3.1.2
-pypdf4.0.1
-scipy1.12.0
-statsmodels==0.14.1
 """
 
 with open("requirements.txt", "w") as f:
