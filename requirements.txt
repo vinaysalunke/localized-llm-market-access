@@ -1,0 +1,13 @@
+torch==2.1.2
+transformers==4.38.1
+accelerate==0.27.2
+bitsandbytes==0.42.0
+langchain==0.1.9
+langchain-community==0.0.24
+langchain-huggingface==0.0.1
+faiss-cpu==1.7.4
+pandas==2.2.0
+openpyxl==3.1.2
+pypdf==4.0.1
+scipy==1.12.0
+statsmodels==0.14.1
