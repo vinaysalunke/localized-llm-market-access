@@ -4,7 +4,7 @@ Markdown
 # Localized LLM Payer Coverage Navigation
 **Evaluating Localized Large Language Models and Retrieval-Augmented Generation for Payer Coverage Navigation in US Market Access**
 
-This repository contains the complete empirical framework, dataset, and evaluation scripts for the manuscript submitted to the *Journal of Managed Care & Specialty Pharmacy (JMCP)*. 
+This repository contains the complete empirical framework, dataset, and evaluation scripts.
 
 ## 📌 Repository Overview
 This project evaluates the operational speed and clinical accuracy of deploying localized Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) to interpret complex health insurance prior authorization (PA) policies. 
